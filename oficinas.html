@@ -1,11 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editais</title>
+    <link rel="stylesheet" href="css/style-editais.css">
 </head>
 <body>
+    <header class="hero">
+        <div class="container">
+            <img src="logo.jpeg" alt="Logo do Grupo REME" class="logo">
+            <div>
+                <h1>REME</h1>
+            </div>
+        </div>
+    </header>
+
     
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Sobre Nós</a></li>         <!-- arquivo separado -->
+            <li><a href="quemsomos.html">Quem Somos</a></li>
+            <li><a href="projetos.html" >Projetos</a></li>
+            <li><a href="editais.html">Editais</a></li>
+            <li><a href="oficinas.html"style="color:#003366;">Oficinas</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="content">
+
+        <h2 class="section-title">Oficinas</h2>
+
+        <!-- FILTRO -->
+        <div class="filter-box">
+            <label>Filtrar por ano:</label>
+            <select id="filter-year">
+                <option value="all">Todos</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+            </select>
+        </div>
+
+        <div class="editais-container">
+
+            <!-- 2025 -->
+            <div class="year-block">
+                <h3 class="year">2025</h3>
+                <ul class="edital-list">
+                    <li class="edital-card">
+                        <strong>Oficina REME - I Workshop de Matemática</strong> — UFU <br>
+                        <a href="https://eventos.ufu.br/ime/wm" target="_blank">[Link do Workshop]</a><br>
+                        <h3>Oficina REME</h3>
+                        <a href="https://ufubr-my.sharepoint.com/personal/wmat_ime_ufu_br/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fwmat_ime_ufu_br%2FDocuments%2FOficina%20-%20folder%2Epdf&parent=%2Fpersonal%2Fwmat_ime_ufu_br%2FDocuments&ga=1">[Oficina]
+                        </a> <br>
+                        <h3>Fotos do Evento</h3>
+                        <a href="https://comunica.ufu.br/ufu-em-imagens/2025/08/1deg-workshop-de-matematica-da-ufu">[Fotos]</a>
+                    </li>
+
+                    <!-- <li class="edital-card">
+                        <strong>Em breve</strong> — UFU  
+                        <a href="pdfs/artigo_2025.pdf" target="_blank">[PDF]</a>
+                    </li> -->
+                </ul>
+            </div>
+
+            <!-- 2024 -->
+            <!-- <div class="year-block">
+                <h3 class="year">2024</h3>
+                <ul class="edital-list">
+                    <li class="edital-card">
+                        <strong>Em breve</strong> — UFU  
+                        <a href="pdfs/artigo_2025.pdf" target="_blank">[PDF]</a>
+                    </li>
+
+                    <li class="edital-card">
+                        <strong>Em breve</strong> — UFU  
+                        <a href="pdfs/artigo_2025.pdf" target="_blank">[PDF]</a>
+                    </li>
+                </ul>
+            </div> -->
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2025 Grupo REME - UFU. Todos os direitos reservados.</p>
+    </footer>
+
+
+    <!-- SCRIPT DO FILTRO -->
+    <script>
+        document.getElementById('filter-year').addEventListener('change', function() {
+            const year = this.value;
+            const blocks = document.querySelectorAll('.year-block');
+
+            blocks.forEach(block => {
+                const blockYear = block.querySelector('.year').textContent.trim();
+                block.style.display = (year === "all" || year === blockYear) ? "block" : "none";
+            });
+        });
+    </script>
+
 </body>
 </html>

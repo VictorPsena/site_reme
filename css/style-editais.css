@@ -4,7 +4,7 @@ body {
     background: #f4f7fb;
 }
 
-/* HEADER */
+/* ############################################# Hero Section */
 .hero {
     background-color: #F7F7F7;
     /* background-image: linear-gradient(to left,#004080 , #408ad3, #FFA500); */
@@ -32,8 +32,19 @@ body {
     margin-bottom: 10px;
 }
 
+/* #############################################    TEXTO */
+.texto {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+.texto h1{
+    color: #000000;
+}
 
-/* NAVBAR */
+
+
+/* #############################################    NAVBAR */
 .navbar {
     background-color: #FFA500;
     padding: 10px 0;
