@@ -127,7 +127,7 @@ h2{
     display:block;
     width:100%;
     height:450px;              /* ajuste a altura conforme desejar */
-    object-fit: cover;         /* mantém proporção e corta o excesso */
+    object-fit: contain;         /* mantém proporção e corta o excesso */
   }
 
   /* setas */
