@@ -125,6 +125,104 @@ body {
     font-weight: bold;
 }
 
+/* Carrossel */
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    background:#fff;
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+    padding: 10px;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform .45s ease;
+    will-change: transform;
+  }
+
+  .slide {
+    min-width: 100%;
+    user-select: none;
+  }
+
+  .slide img {
+    display:block;
+    width:100%;
+    height:450px;              /* ajuste a altura conforme desejar */
+    object-fit: contain;         /* mantém proporção e corta o excesso */
+  }
+
+  /* setas */
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,.55);
+    color: #fff;
+    border: none;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    z-index: 5;
+  }
+  .btn:active{transform: translateY(-50%) scale(.98)}
+  .btn-left{left:12px}
+  .btn-right{right:12px}
+
+  /* indicadores (bolinhas) */
+  .dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 12px;
+    display:flex;
+    gap:8px;
+    z-index:6;
+  }
+  .dot {
+    width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.6);cursor:pointer;border:1px solid rgba(0,0,0,.15)
+  }
+  .dot.active{background:#fff;border-color:#333}
+
+  /* responsivo: altura menor em telas pequenas */
+  @media (max-width:600px){
+    .slide img{height:260px}
+    .btn{width:38px;height:38px}
+  }
+
+/* ############################################## LEgendas carrocel */
+.slide {
+  position: relative;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;            /* fica embaixo */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6); /* fundo transparente */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    max-width: 90%;
+}
+
+
+
 /* FOOTER */
 .footer {
     text-align: center;
